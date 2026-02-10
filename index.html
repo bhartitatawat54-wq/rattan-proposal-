@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Rattan</title>
+    <style>
+        /* Design aur Background */
+        body {
+            background: #fff0f3;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(255, 75, 110, 0.2);
+            border: 2px solid #ffb3c1;
+            z-index: 10;
+            max-width: 300px;
+        }
+
+        h1 {
+            color: #ff4d6d;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #590d22;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .main-heart {
+            font-size: 60px;
+            color: #ff4d6d;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: beat 0.7s infinite alternate;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+
+        button {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+        }
+
+        button:hover {
+            background: #c9184a;
+            transform: translateY(-3px);
+        }
+
+        /* Floating Hearts Animation */
+        .floating-heart {
+            position: absolute;
+            bottom: -50px;
+            color: #ffb3c1;
+            font-size: 20px;
+            user-select: none;
+            pointer-events: none;
+            animation: float Up 4s linear forwards;
+        }
+
+        @keyframes floatUp {
+            to {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+    <img src="love.jpg" class="photo">
+
+    <h1>Rattan ❤️</h1>
+
+    <p class="message">
+        From the moment you came into my life,  
+        everything changed for the better.  
+        You are my love, my home, my forever.
+    </p>
+
+    <h2 class="proposal">
+        Will You Marry Me? 💍
+    
+        <p id="answer" class="answer-text"></p>
+
+<div class="buttons">
+    <button id="yesBtn" onclick="sayYes()">Yes ❤️</button>
+    <button id="noBtn" onmouseover="moveNo()">No 😜</button>
+</div>
+<script src="script.js"></script>
